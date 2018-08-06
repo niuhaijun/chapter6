@@ -24,6 +24,5 @@ public class MessageFormatTest {
     String msg2 = mf.format(params);
     System.out.println(msg1);
     System.out.println(msg2);
-
   }
 }
