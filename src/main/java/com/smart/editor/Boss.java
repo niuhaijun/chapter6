@@ -5,6 +5,7 @@ public class Boss {
   private String name;
   private Car car = new Car();
 
+  @Override
   public String toString() {
     String temp = "name:" + name + "\n";
     temp += "car:" + car;

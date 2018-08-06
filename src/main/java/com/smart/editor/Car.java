@@ -30,6 +30,7 @@ public class Car {
     this.price = price;
   }
 
+  @Override
   public String toString() {
     return "brand:" + brand + "/maxSpeed:" + maxSpeed + "/price:" + price;
   }

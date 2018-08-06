@@ -4,6 +4,7 @@ import java.beans.PropertyEditorSupport;
 
 public class CustomCarEditor extends PropertyEditorSupport {
 
+  @Override
   public String getAsText() {
     Object value = getValue();
     if (value == null) {
@@ -14,6 +15,7 @@ public class CustomCarEditor extends PropertyEditorSupport {
     }
   }
 
+  @Override
   public void setAsText(String text) {
     if (text == null || text.indexOf(",") == -1) {
       throw new IllegalArgumentException("设置的字符串格式不正确");
