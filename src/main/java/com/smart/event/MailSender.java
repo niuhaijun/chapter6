@@ -8,6 +8,13 @@ public class MailSender implements ApplicationContextAware {
 
   private ApplicationContext ctx;
 
+  /**
+   * ApplicationContextAware接口方法，以便于容器启动时自动注入容器实例。
+   *
+   * @param ctx 容器实例
+   * @throws BeansException 异常
+   */
+  @Override
   public void setApplicationContext(ApplicationContext ctx)
       throws BeansException {
     this.ctx = ctx;
