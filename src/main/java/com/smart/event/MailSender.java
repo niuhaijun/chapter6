@@ -24,6 +24,7 @@ public class MailSender implements ApplicationContextAware {
   public void sendMail(String to) {
     System.out.println("MailSender:模拟发送邮件...");
     MailSendEvent mse = new MailSendEvent(this.ctx, to);
+    // 向容器中的所有事件监听器发送事件
     ctx.publishEvent(mse);
   }
 }
