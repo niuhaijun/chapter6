@@ -22,6 +22,7 @@
     <property name="cacheSeconds" value="2"/>
   </bean>
 
+  <!--注册资源Bean，其名称必须为messageSource-->
   <bean id="messageSource"
     class="org.springframework.context.support.ResourceBundleMessageSource">
     <property name="basenames">
