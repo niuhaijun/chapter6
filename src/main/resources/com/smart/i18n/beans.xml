@@ -22,7 +22,7 @@
     <property name="cacheSeconds" value="2"/>
   </bean>
 
-  <bean id="messageSource12"
+  <bean id="messageSource"
     class="org.springframework.context.support.ResourceBundleMessageSource">
     <property name="basenames">
       <list>

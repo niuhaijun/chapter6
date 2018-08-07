@@ -12,7 +12,7 @@ public class I18nGreeting {
     String[] configs = {"com/smart/i18n/beans.xml"};
     ApplicationContext ctx = new ClassPathXmlApplicationContext(configs);
 
-    MessageSource ms = (MessageSource) ctx.getBean("myResource1");
+    MessageSource ms = ctx.getBean("myResource1", MessageSource.class);
     Object[] params = {"John", new GregorianCalendar().getTime()};
 
     String str1 = ms.getMessage("greeting.common", params, Locale.US);
@@ -21,14 +21,13 @@ public class I18nGreeting {
     System.out.println(str1);
     System.out.println(str2);
     System.out.println(str3);
-
   }
 
   private static void rrsrBdlMessageResource() throws Exception {
     String[] configs = {"com/smart/i18n/beans.xml"};
     ApplicationContext ctx = new ClassPathXmlApplicationContext(configs);
 
-    MessageSource ms = (MessageSource) ctx.getBean("myResource2");
+    MessageSource ms = ctx.getBean("myResource2", MessageSource.class);
     Object[] params = {"John", new GregorianCalendar().getTime()};
 
     for (int i = 0; i < 2; i++) {
@@ -51,7 +50,7 @@ public class I18nGreeting {
 
   public static void main(String[] args) throws Exception {
 //		rsrBdlMessageResource();
-//		rrsrBdlMessageResource();
+//    rrsrBdlMessageResource();
     ctxMessageResource();
   }
 }
